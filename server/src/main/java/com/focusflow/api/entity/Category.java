@@ -1,0 +1,1 @@
+package com.focusflow.api.entity; import jakarta.persistence.*; @Entity public class Category { @Id @GeneratedValue(strategy=GenerationType.UUID) public String id; @Column(nullable=false) public String name; public String color="#6058e9"; @ManyToOne(optional=false,fetch=FetchType.LAZY) public AppUser user; }

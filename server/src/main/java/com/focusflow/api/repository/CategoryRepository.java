@@ -1,0 +1,1 @@
+package com.focusflow.api.repository; import com.focusflow.api.entity.Category; import org.springframework.data.jpa.repository.*; import java.util.*; public interface CategoryRepository extends JpaRepository<Category,String>{List<Category> findByUserId(String userId); Optional<Category> findByIdAndUserId(String id,String userId); @Modifying void deleteByUserId(String userId);}
